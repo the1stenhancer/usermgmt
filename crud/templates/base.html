@@ -11,6 +11,7 @@
         <!-- Links -->
         <link href="{% static 'img/icons/logo.ico' %}" rel="icon">
         <link href="{% static 'img/base.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         {% block header_link %}
         {% endblock %}
 
@@ -25,7 +26,7 @@
         <header>
             <nav>
                 <div class="nav-1">
-                    <img src="">
+                    <img src="{% static 'img/icons/nav_logo.ico' %}">
                 </div>
                 <div class="nav-2">
                     <ul>
@@ -34,8 +35,8 @@
                         <li><a href="" class="register-a">{% translate "Register" %}</a></li>
                         <li class="language-dropdown">
                             <p class="current-language">
-                                <span>{{ get_current_language }}</span> 
-                                <img src="">
+                                <span>{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}</span> 
+                                <span class="material-symbols-outlined">arrow_drop_down</span>
                             </p>
                             <div class="languages">
                                 <p><img src=""> <span>en</span></p>
@@ -51,7 +52,7 @@
             {% endblock %}
         </main>
         <footer>
-            <p>&copy;2024 {% translate "Site powered by " %}<a href="">prantix.com</a></p>
+            <p>&copy;2024 {% translate "Site powered by " %}<a href="https://prantix.com">prantix.com</a></p>
         </footer>
     </body>
 </html>
