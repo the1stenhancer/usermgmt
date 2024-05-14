@@ -20,11 +20,10 @@ class Detail(models.Model):
     married = models.BooleanField(choices=MARITAL_STATUS, help_text=_("Marital status"), null=False)
     kids = models.PositiveIntegerField(default=0, help_text=_("Number of kids"), null=False)
     # work information
-    doh = models.DateField(help_text=_("Date of hiring"), null=False)
+    doh = models.DateField(auto_now_add=True, help_text=_("Date of hiring"), null=False)
     title = models.CharField(help_text=_("Job title"), max_length=255, null=False)
     duration = models.PositiveIntegerField(help_text=_("Contract duration"), default=3, null=False)
     # other information
-    created = models.DateTimeField(auto_now_add=True, help_text=_("Datetime model was created"))
     updated = models.DateTimeField(auto_now=True, help_text=_("Datetime model was last modified"))
 
     def age(self):
