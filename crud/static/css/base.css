@@ -111,4 +111,13 @@ body {
     footer p {
         text-align: center;
     }
+
+    footer p a {
+        text-decoration: none;
+        color: #57EB5C;
+    }
+
+    footer p a:hover {
+        text-decoration: underline;
+    }
 }
