@@ -26,7 +26,9 @@
         <header>
             <nav>
                 <div class="nav-1">
-                    <img src="{% static 'img/icons/nav_logo.ico' %}">
+                    <a href="{% url 'crud:dashboard' %}">
+                        <img src="{% static 'img/icons/nav_logo.ico' %}">
+                    </a>
                 </div>
                 <div class="nav-2">
                     <span class="material-symbols-outlined desktop-hide">menu</span>
@@ -39,7 +41,7 @@
                                 <span>{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}</span> 
                                 <span class="material-symbols-outlined">arrow_drop_down</span>
                             </p>
-                            <div class="mobile-hide">
+                            <div class="desktop-hide">
                                 <div class="languages">
                                     <p><img src="{% static 'img/flags/uk_flag.svg' %}"> <span>en</span></p>
                                     <p><img src="{% static 'img/flags/france_flag.svg' %}"> <span>fr</span></p>

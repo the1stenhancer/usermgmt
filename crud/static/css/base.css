@@ -1,0 +1,80 @@
+/* Utilities 
+
+- colors
+    - Green: 57EB5C
+    - my black: 111111
+*/
+
+
+
+/* General */
+    
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden scroll;
+}
+
+@media screen and (min-width: 80em) {
+    .desktop-hide {
+        position: absolute;
+        left: -100%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
+
+        padding: 1em 2em;
+    }
+
+    .nav-1 img {
+        width: 10em;
+    }
+
+    .nav-2 ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-2 ul li {
+        margin: 0 0.5em;
+    }
+
+    .nav-2 ul li a {
+        text-decoration: none;
+        color: #111111;
+        padding: 0.8em 1em;
+        border-radius: 0.25em;
+    }
+
+    .nav-2 ul li a:hover {
+        color: #fff;
+        background-color: #57EB5C;
+    }
+
+    .nav-2 img {
+        width: 1.5em;
+    }
+
+    .nav-2 .current-language {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        cursor: pointer;
+    }
+}
