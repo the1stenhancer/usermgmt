@@ -1,0 +1,57 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Chuye Brian">
+        <meta name="description" content="Simple web application for managing site users.">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!-- Links -->
+        <link href="{% static 'img/icons/logo.ico' %}" rel="icon">
+        <link href="{% static 'img/base.css' %}" rel="stylesheet">
+        {% block header_link %}
+        {% endblock %}
+
+        <!-- Scripts -->
+        <script src="{% static 'js/base.js' %}" type="module" defer></script>
+        {% block header_script %}
+        {% endblock %}
+
+        <title>{% block title %}{% endblock %} | usermgmt</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-1">
+                    <img src="">
+                </div>
+                <div class="nav-2">
+                    <ul>
+                        <li><a href="" class="users-a">{% translate "Users" %}</a></li>
+                        <li><a href="" class="login-a">{% translate "Login" %}</a></li>
+                        <li><a href="" class="register-a">{% translate "Register" %}</a></li>
+                        <li class="language-dropdown">
+                            <p class="current-language">
+                                <span>{{ get_current_language }}</span> 
+                                <img src="">
+                            </p>
+                            <div class="languages">
+                                <p><img src=""> <span>en</span></p>
+                                <p><img src=""> <span>fr</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer>
+            <p>&copy;2024 {% translate "Site powered by " %}<a href="">prantix.com</a></p>
+        </footer>
+    </body>
+</html>
