@@ -77,4 +77,8 @@ body {
 
         cursor: pointer;
     }
+
+    footer p {
+        text-align: center;
+    }
 }
