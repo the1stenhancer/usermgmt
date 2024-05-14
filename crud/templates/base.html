@@ -11,7 +11,7 @@
         <!-- Links -->
         <link href="{% static 'img/icons/logo.ico' %}" rel="icon">
         <link href="{% static 'css/base.css' %}" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         {% block header_link %}
         {% endblock %}
 
@@ -29,7 +29,8 @@
                     <img src="{% static 'img/icons/nav_logo.ico' %}">
                 </div>
                 <div class="nav-2">
-                    <ul>
+                    <span class="material-symbols-outlined desktop-hide">menu</span>
+                    <ul class="mobile-hide">
                         <li><a href="" class="users-a">{% translate "Users" %}</a></li>
                         <li><a href="" class="login-a">{% translate "Login" %}</a></li>
                         <li><a href="" class="register-a">{% translate "Register" %}</a></li>
@@ -38,9 +39,11 @@
                                 <span>{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}</span> 
                                 <span class="material-symbols-outlined">arrow_drop_down</span>
                             </p>
-                            <div class="languages">
-                                <p><img src=""> <span>en</span></p>
-                                <p><img src=""> <span>fr</span></p>
+                            <div class="mobile-hide">
+                                <div class="languages">
+                                    <p><img src=""> <span>en</span></p>
+                                    <p><img src=""> <span>fr</span></p>
+                                </div>
                             </div>
                         </li>
                     </ul>
