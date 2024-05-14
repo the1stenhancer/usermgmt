@@ -5,7 +5,15 @@
     - my black: 111111
 */
 
+@font-face {
+    font-family: "roboto-regular";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
 
+@font-face {
+    font-family: "roboto-bold";
+    src: url("../fonts/Roboto/Roboto-Bold");
+}
 
 /* General */
     
@@ -14,6 +22,7 @@
 }
 
 html {
+    font-family: "roboto-regular";
     font-size: 1em;
 }
 
@@ -68,6 +77,7 @@ body {
 
     .nav-2 img {
         width: 1.5em;
+        margin-right: 0.5em;
     }
 
     .nav-2 .current-language {
@@ -76,6 +86,26 @@ body {
         align-items: center;
 
         cursor: pointer;
+    }
+
+    .nav-2 .current-language span:nth-child(1) {
+        color: #57EB5C;
+    }
+
+    .nav-2 .language-dropdown .languages {
+        padding: 0.5em 1em;
+        background-color: #fff;
+        color: #111111;
+        box-shadow: 0.1em 0.1em 0.5em #bbbbbb;
+        font-family: "roboto-bold";
+    }
+
+    .nav-2 .language-dropdown .languages p {
+        cursor: pointer;
+    }
+
+    .nav-2 .language-dropdown .languages p:hover {
+        color: #57EB5C;
     }
 
     footer p {
