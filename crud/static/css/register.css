@@ -2,13 +2,14 @@
     .two-pane {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
         gap: 1em;
 
         padding: 0 2em;
     }
 
     .section-image img {
-        width: 80%;
+        width: 60%;
         height: 100%;
         display: block;
         margin: 0 auto;

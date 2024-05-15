@@ -68,4 +68,4 @@ def login_view(request, next):
 def logout_view(request):
     if request.user.is_authenticated:
         logout(request=request)
-    return redirect("crud:dashboard")
+    return redirect("crud:home")
