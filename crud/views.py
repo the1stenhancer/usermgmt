@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
 from .forms import UserForm, DetailForm, LoginForm
 
 # Create your views here.
@@ -8,7 +7,7 @@ from .forms import UserForm, DetailForm, LoginForm
 def dashboard(request):
     return render(
         request=request, 
-        template_name='main/dashboard.html',
+        template_name='main/home.html',
         context={}
     )
 
@@ -18,11 +17,13 @@ def register(request):
         user_form = UserForm(data=request.POST)
         detail_form = DetailForm(data=request.POST)
         if user_form.is_valid() and detail_form.is_valid():
-            new_user = user_form.save()
+            new_user = user_form.save(commit=False)
+            new_user.set_password(user_form.cleaned_data["confirm_password"])
+            new_user.save()
             new_user_detail = detail_form.save(commit=False)
             new_user_detail.user = new_user
             new_user_detail.save()
-            return redirect("crud:dashboard")
+            return redirect("crud:login", "home")
     else:
         user_form = UserForm()
         detail_form = DetailForm()
@@ -46,10 +47,8 @@ def login_view(request, next):
             password = cd["password"]
             user = authenticate(
                 reuqest=request,
-                credentials={
-                    "username": username,
-                    "password": password
-                }
+                username=username,
+                password=password
             )
             if user is not None:
                 login(request=request, user=user)

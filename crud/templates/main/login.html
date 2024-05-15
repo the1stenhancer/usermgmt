@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block header_link %}
+<link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block header_script %}
+<script src="{% static 'js/login.js' %}" type="module" defer></script>
+{% endblock %}
+
+{% block title %}{% translate "Login" %}{% endblock %}
+
+{% block main %}
+
+{% translate "Login" as login %}
+
+<section class="two-pane">
+    <article class="two-pane-form">
+        <h2>{% translate "Login Form" %}</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-container">
+                <div class="user-form">
+                    {% for field in form %}
+                        <div class="field-wrapper">
+                            <p>{{ field.label_tag }}</p>
+                            {% if field.errors %}
+                                {% for error in field.errors %}
+                                    <p class="error">*{{ error }}</p>
+                                {% endfor %}
+                            {% endif %}
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <input type="submit" value="{{ login }}">
+        </form>
+    </article>
+    <article class="section-image">
+        <img src="{% static 'img/register_img.svg' %}">
+    </article>
+</section>
+
+{% endblock %}

@@ -26,16 +26,20 @@
         <header>
             <nav>
                 <div class="nav-1">
-                    <a href="{% url 'crud:dashboard' %}">
+                    <a href="{% url 'crud:home' %}">
                         <img src="{% static 'img/icons/nav_logo.ico' %}">
                     </a>
                 </div>
                 <div class="nav-2">
                     <span class="material-symbols-outlined desktop-hide">menu</span>
                     <ul class="mobile-hide">
+                        <li><a href="{% url 'crud:home' %}" class="home-a">{% translate "Home" %}</a></li>
                         <li><a href="" class="users-a">{% translate "Users" %}</a></li>
-                        <li><a href="{% url 'crud:login' 'dashboard' %}" class="login-a">{% translate "Login" %}</a></li>
-                        <li><a href="{% url 'crud:register' %}" class="register-a">{% translate "Register" %}</a></li>
+                        {% if not user.is_authenticated %}
+                            <li><a href="{% url 'crud:login' 'home' %}" class="login-a">{% translate "Login" %}</a></li>
+                            <li><a href="{% url 'crud:register' %}" class="register-a">{% translate "Register" %}</a></li>
+                        {% endif %}
+                        <li><a href="" class="references-a">{% translate "References" %}</a></li>
                         {% if user.is_authenticated %}
                             <li><a href="{% url 'crud:logout' %}" class="logout-a">{% translate "Logout" %}</a></li>
                         {% endif %}
