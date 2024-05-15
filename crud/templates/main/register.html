@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block header_link %}
+
+{% endblock %}
+
+{% block header_script %}
+
+{% endblock %}
+
+{% block title %}{% translate "Sign Up" %}{% endblock %}
+
+{% block main %}
+
+{% translate "Sign Up" as signup %}
+
+<section class="two-pane">
+    <article class="section-image">
+        <img src="">
+    </article>
+    <article class="section-form">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="user-form">
+                {% for field in uform %}
+                    <div class="field-wrapper">
+                        <p>{{ field.label_tag }}</p>
+                        {% if field.errors %}
+                            {% for error in field.errors %}
+                                <p class="error">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                        <p>{{ field }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="detail-form">
+                {% for field in dform %}
+                    <div class="field-wrapper">
+                        <p>{{ field.label_tag }}</p>
+                        {% if field.errors %}
+                            {% for error in field.errors %}
+                                <p class="error">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                        <p>{{ field }}</p>
+                        {{ field.help_text }}
+                    </div>
+                {% endfor %}
+                <input type="submit" class="form-submit-button" value="{{ signup }}">
+            </div>
+        </form>
+    </article>
+</section>
+
+{% endblock %}

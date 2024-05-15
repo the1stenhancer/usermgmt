@@ -35,7 +35,7 @@
                     <ul class="mobile-hide">
                         <li><a href="" class="users-a">{% translate "Users" %}</a></li>
                         <li><a href="" class="login-a">{% translate "Login" %}</a></li>
-                        <li><a href="" class="register-a">{% translate "Register" %}</a></li>
+                        <li><a href="{% url 'crud:register' %}" class="register-a">{% translate "Register" %}</a></li>
                         <li class="language-dropdown">
                             <p class="current-language">
                                 <span>{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}</span> 

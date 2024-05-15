@@ -14,6 +14,16 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ("first_name", "last_name", "email", "username", "password")
+        labels = {
+            "first_name": _("First name"),
+            "last_name": _("Last name"), 
+            "email": _("Email"),
+            "username": _("Username"),
+            "password": _("Password")
+        }
+        widgets = {
+            "password": forms.PasswordInput,
+        }
     
     def clean(self):
         cleaned_data = super().clean()
@@ -42,5 +52,18 @@ class DetailForm(forms.ModelForm):
         model = Detail
         fields = ["phone", "dob", "married", "kids", "title", "duration"]
         labels = {
+            "phone": _("Phone number"),
             "dob": _("Date of birth"),
+            "duration": _("Contract Duration")
+        }
+        widgets = {
+            "phone": forms.TextInput(attrs={
+                "placeholder": "237xxxxxxxxx"
+            }),
+            "dob": forms.DateInput(attrs={
+                "placeholder": "YYYY-MM-DD",
+            }),
+            "title": forms.TextInput(attrs={
+                "placeholder": _("Network/Security Engineer")
+            })
         }
