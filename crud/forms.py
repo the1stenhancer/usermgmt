@@ -35,3 +35,12 @@ class UserForm(forms.ModelForm):
                     code="mismatch"
                 )
             )
+
+
+class DetailForm(forms.ModelForm):
+    class Meta:
+        model = Detail
+        fields = ["phone", "dob", "married", "kids", "title", "duration"]
+        labels = {
+            "dob": _("Date of birth"),
+        }
