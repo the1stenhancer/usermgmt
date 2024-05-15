@@ -23,7 +23,7 @@
 
 html {
     font-family: "roboto-regular";
-    font-size: 1em;
+    font-size: 0.9em;;
 }
 
 body {
@@ -110,6 +110,7 @@ body {
 
     footer p {
         text-align: center;
+        font-size: 0.9em;
     }
 
     footer p a {

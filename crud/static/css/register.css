@@ -1,0 +1,75 @@
+@media screen and (min-width: 80em) {
+    .two-pane {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+
+        padding: 0 2em;
+    }
+
+    .section-image img {
+        width: 80%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .two-pane-form {
+        box-shadow: 0 0 0.25em #42B946;
+        border-radius: 0.4em;
+
+        width: 80%;
+        margin: 0 auto;
+        padding: 0.6em;
+    }
+
+    .two-pane-form h2 {
+        text-align: center;
+        color: #42B946;
+        margin: 0.3em 0;
+    }
+
+    .form-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+
+        padding: 0.4em 1em;
+    }
+
+    form input[type=submit] {
+        display: block;
+        width: 40%;
+        padding: 0.8em 2em;
+        margin: 0 auto;
+        background-color: #42B946;
+        color: #fff;
+        border: none;
+        border-radius: 0.4em;
+    }
+
+    form input[type=submit]:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    form select {
+        padding: 0.25em 0.5em;
+    }
+
+    .field-wrapper {
+        margin: 1em 0;
+    }
+
+    .field-wrapper p {
+        margin: 0.9em 0 0.4em 0;
+    }
+
+    .field-wrapper input {
+        width: 90%;
+        padding: 0.3em 0.5em;
+        border: 0.1em solid #42B946;
+        border-radius: 0.3em;
+        outline: none;
+    }
+}
