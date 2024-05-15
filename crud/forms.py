@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
 from .models import Detail
+import re
 
 
 class UserForm(forms.ModelForm):
@@ -67,3 +68,31 @@ class DetailForm(forms.ModelForm):
                 "placeholder": _("Network/Security Engineer")
             })
         }
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(
+        max_length=255,
+        label=_("Username"),
+        help_text=_("A unique username"),
+        required=True
+    )
+    password = forms.CharField(
+        max_length=255,
+        required=True,
+        label=_("Password"),
+        help_text=_("Minimum length is 9, at least one symbol, lower and upper case letters, number"),
+        widget=forms.PasswordInput
+    )
+
+    def clean(self):
+        cp = self.cleaned_data["password"]
+        
+        if len(cp) < 9:
+            self.add_error(
+                field="password",
+                error=ValidationError(
+                    message=_("Minimum password length is 9!"),
+                    code="short"
+                )
+            )

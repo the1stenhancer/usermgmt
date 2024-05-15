@@ -34,8 +34,11 @@
                     <span class="material-symbols-outlined desktop-hide">menu</span>
                     <ul class="mobile-hide">
                         <li><a href="" class="users-a">{% translate "Users" %}</a></li>
-                        <li><a href="" class="login-a">{% translate "Login" %}</a></li>
+                        <li><a href="{% url 'crud:login' 'dashboard' %}" class="login-a">{% translate "Login" %}</a></li>
                         <li><a href="{% url 'crud:register' %}" class="register-a">{% translate "Register" %}</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'crud:logout' %}" class="logout-a">{% translate "Logout" %}</a></li>
+                        {% endif %}
                         <li class="language-dropdown">
                             <p class="current-language">
                                 <span>{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}</span> 
