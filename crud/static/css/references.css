@@ -1,0 +1,43 @@
+@media screen and (min-width: 80em) {
+    .section-references {
+        padding: 2em 4em;
+    }
+
+    .section-references h1 {
+        font-size: 2.5em;
+        text-align: center;
+        color: #137216;
+    }
+
+    .section-references table {
+        width: 100%;
+        margin: 1em 0 4em;
+        border-collapse: collapse;
+    }
+
+    .section-references table th {
+        font-size: 1em;
+        padding: 1em 0;
+        background-color: #8af78e;
+    }
+
+    .section-references table tr:nth-child(even) {
+        background-color: #8af78e;
+    }
+
+    .section-references table td {
+        font-family: "roboto-light";
+        padding: 1em 0;
+        text-align: center;
+    }
+
+    .section-references table td a {
+        text-decoration: none;
+    }
+
+    .section-references p {
+        text-align: center;
+        font-size: "roboto-bold";
+        color: #137216;
+    }
+}

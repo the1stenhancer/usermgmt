@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block header_link %}
+<link href="{% static 'css/references.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block header_script %}{% endblock %}
+
+{% block title %}{% translate "References" %}{% endblock %}
+
+{% block main %}
+
+<section class="section-references">
+    <h1>{% translate "Tribute to resource authors" %}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>{% translate "Resource" %}</th>
+                <th>{% translate "Type" %}</th>
+                <th>{% translate "Location" %}</th>
+                <th>{% translate "Author(s)" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{% translate "Dropdown arrow" %}</td>
+                <td>{% translate "Icon" %}</td>
+                <td>{% translate "Navigation bar" %}</td>
+                <td>Google (<a href="https://fonts.google.com/icons" target="_blank">Google icons</a>)</td>
+            </tr>
+            <tr>
+                <td>{% translate "Great Britain and France flags" %}</td>
+                <td>{% translate "Image" %}</td>
+                <td>{% translate "Navigation bar" %}</td>
+                <td>Wikipedia (<a href="https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population" target="_blank">Wikipedia country list</a>)</td>
+            </tr>
+            <tr>
+                <td>{% translate "Girl with books and pen in hand" %}</td>
+                <td>{% translate "Illustration" %}</td>
+                <td>{% translate "Home page" %}</td>
+                <td>Lunacy (<a href="https://icons8.com" target="_blank">icons8.com</a>)</td>
+            </tr>
+            <tr>
+                <td>{% translate "Work space and graph with web browser in background" %}</td>
+                <td>{% translate "Illustration" %}</td>
+                <td>{% translate "Home page" %}</td>
+                <td>Lunacy (<a href="https://icons8.com" target="_blank">icons8.com</a>)</td>
+            </tr>
+            <tr>
+                <td>{% translate "Young woman with stack of books" %}</td>
+                <td>{% translate "Illustration" %}</td>
+                <td>{% translate "Login page" %}</td>
+                <td>Lunacy (<a href="https://icons8.com" target="_blank">icons8.com</a>)</td>
+            </tr>
+            <tr>
+                <td>{% translate "Young boys and young girl jumping" %}</td>
+                <td>{% translate "Illustration" %}</td>
+                <td>{% translate "Registration page" %}</td>
+                <td>Lunacy (<a href="https://icons8.com" target="_blank">icons8.com</a>)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>{% translate "Authors, once more, thank you for your awesome resources." %}</p>
+</section>
+
+{% endblock %}

@@ -39,7 +39,7 @@
                             <li><a href="{% url 'crud:login' 'home' %}" class="login-a">{% translate "Login" %}</a></li>
                             <li><a href="{% url 'crud:register' %}" class="register-a">{% translate "Register" %}</a></li>
                         {% endif %}
-                        <li><a href="" class="references-a">{% translate "References" %}</a></li>
+                        <li><a href="{% url 'crud:references' %}" class="references-a">{% translate "References" %}</a></li>
                         {% if user.is_authenticated %}
                             <li><a href="{% url 'crud:logout' %}" class="logout-a">{% translate "Logout" %}</a></li>
                         {% endif %}
