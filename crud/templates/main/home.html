@@ -1,15 +1,30 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 {% block header_link %}
-
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block header_script %}
-
+<script src="{% static 'js/home.js' %}" type="module" defer></script>
 {% endblock %}
 
 {% block title %}{% translate "Home" %}{% endblock %}
 
 {% block main %}
+
+<section class="home-section">
+    <article class="home-article-1">
+        <h1>{% translate "It&apos;s simple and enjoyable!" %}</h1>
+        <p>{% translate "Managing users has never been so simple and enjoyable at the same time. No need to be overwhelmed anymore, we have your back." %}</p>
+        <div class="home-links">
+            <a href="{% url 'crud:login' 'home' %}">{% translate "Login now" %}</a>
+            <a href="{% url 'crud:register' %}">{% translate "Register now" %}</a>
+        </div>
+    </article>
+    <article class="home-article-2">
+        <img src="{% static 'img/home_img.svg' %}">
+    </article>
+</section>
 
 {% endblock %}

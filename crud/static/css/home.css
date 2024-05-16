@@ -1,0 +1,52 @@
+@media screen and (min-width: 80em) {
+    .home-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 0.5em;
+    
+        padding: 1em 4em;
+    }
+    
+    .home-article-1 {
+        padding: 0.5em 0;
+    }
+    
+    .home-article-1 h1 {
+        font-size: 3.5em;
+    }
+    
+    .home-article-1 p {
+        font-size: 1.2em;
+        line-height: 2;
+    
+        margin-bottom: 3em;
+    }
+    
+    .home-links {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3.5em;
+    }
+    
+    .home-links a {
+        text-decoration: none;
+        padding: 0.8em 2em;
+        background-color: #42B946;
+        color: #fff;
+        border-radius: 0.4em;
+    }
+    
+    .home-links a:hover {
+        opacity: 0.8;
+    }
+    
+    .home-article-2 {
+        padding-left: 5em;
+    }
+
+    .home-article-2 img {
+        width: 110%;
+    }
+}
