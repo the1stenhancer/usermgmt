@@ -9,8 +9,8 @@ from django.urls import reverse
 
 class Detail(models.Model):
     MARITAL_STATUS = (
-        ('m', 'Married'),
-        ('nm', 'Not Married'),
+        (_('Yes'), _('Married')),
+        (_('No'), _('Not Married')),
     )
     # personal information
     user = models.OneToOneField(User, on_delete=models.CASCADE)

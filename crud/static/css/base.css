@@ -75,7 +75,12 @@ body {
         border-radius: 0.25em;
     }
 
-    .nav-2 ul li a:hover {
+    .nav-2 ul li .register-a {
+        color: #fff;
+        background-color: #a1bee9;
+    }
+
+    .nav-2 ul li a:hover, .nav-2 ul li .highlight-navlink {
         color: #fff;
         background-color: #42B946;
     }

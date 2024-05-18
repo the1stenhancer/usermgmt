@@ -6,7 +6,7 @@
     .section-references h1 {
         font-size: 2.5em;
         text-align: center;
-        color: #137216;
+        color: #5d6e86;
     }
 
     .section-references table {
@@ -18,11 +18,11 @@
     .section-references table th {
         font-size: 1em;
         padding: 1em 0;
-        background-color: #8af78e;
+        background-color: #a1bee9;
     }
 
     .section-references table tr:nth-child(even) {
-        background-color: #8af78e;
+        background-color: #cdfacf;
     }
 
     .section-references table td {

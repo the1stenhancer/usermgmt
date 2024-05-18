@@ -1,0 +1,9 @@
+@media screen and (min-width: 80em) {
+    .update {
+        color: #071cd8;
+    }
+
+    .delete {
+        color: #b10606;
+    }
+}

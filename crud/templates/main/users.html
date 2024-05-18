@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block header_link %}
+<link href="{% static 'css/references.css' %}" rel="stylesheet">
+<link href="{% static 'css/users.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block header_script %}
+<script href="{% static 'js/users.js' %}" type="module" defer></script>
+{% endblock %}
+
+{% block title %}{% translate "Users" %}{% endblock %}
+
+{% block main %}
+
+<section class="section-references">
+    <h1>{% translate "Users list" %}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>{% translate "First name" %}</th>
+                <th>{% translate "Last name" %}</th>
+                <th>{% translate "Birth date" %}</th>
+                <th>{% translate "Married" %}</th>
+                <th>{% translate "Kids" %}</th>
+                <th>{% translate "Hire Date" %}</th>
+                <th>{% translate "Job title" %}</th>
+                <th>{% translate "Contract duration" %}</th>
+                <th>{% translate "Phone" %}</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.detail.dob }}</td>
+                    <td>{{ user.detail.married }}</td>
+                    <td>{{ user.detail.kids }}</td>
+                    <td>{{ user.detail.doh }}</td>
+                    <td>{{ user.detail.title }}</td>
+                    <td>{{ user.detail.duration }}</td>
+                    <td>+{{ user.detail.phone }}</td>
+                    <td><a href="{% url 'crud:update' user.id %}" class="update">{% translate "Update" %}</a></td>
+                    <td><a href="{% url 'crud:delete' user.id %}" class="delete">{% translate "Delete" %}</a></td>
+                </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+    <p>{% translate "Administrators, please make sure to notify clients before modifications." %}</p>
+</section>
+
+{% endblock %}

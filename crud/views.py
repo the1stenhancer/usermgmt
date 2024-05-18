@@ -82,7 +82,7 @@ def references(request):
 
 
 def users(request):
-    users = User.objects.all().exclude(username="the1stenhancer").exclude(username="admin")
+    users = User.objects.all().exclude(username="admin")
     return render(
         request=request,
         template_name="main/users.html",
@@ -93,10 +93,11 @@ def users(request):
 
 
 def update_user(request, pk):
-    user = get_object_or_404(User, id=pk)
+    user: User = get_object_or_404(User, id=pk)
+    detail: Detail = user.detail
     if request.method == "POST":
         user_form = UserForm(instance=user, data=request.POST)
-        detail_form = DetailForm(instance=user.detail, data=request.POST)
+        detail_form = DetailForm(instance=detail, data=request.POST)
         if user_form.is_valid() and detail_form.is_valid():
             user_form.save(commit=True)
             detail_form.save(commit=True)
