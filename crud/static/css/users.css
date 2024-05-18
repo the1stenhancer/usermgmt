@@ -3,6 +3,10 @@
         color: #5d6e86;
     }
 
+    .section-references table {
+        padding: 0 0.8rem;
+    }
+
     .section-references table th {
         background-color: #a1bee9;
     }
@@ -26,5 +30,39 @@
     .update:hover,
     .delete:hover {
         color: #42B946;
+    }
+
+    .pagination-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        gap: 0.6rem;
+
+        width: 20%;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .pagination-container a {
+        text-decoration: none;
+        padding: 0.7rem 0.9rem;
+        background-color: #87ade7;
+        color: #fff;
+        border-radius: 0.3rem;
+    }
+
+    .pagination-container a:hover {
+        background-color: #42B946;
+    }
+
+    .no-previous,
+    .no-next {
+        opacity: 0.7;
+    }
+
+    .pagination-container .no-previous:hover,
+    .pagination-container .no-next:hover {
+        background-color: #87ade7;
     }
 }

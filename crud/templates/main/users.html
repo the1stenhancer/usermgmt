@@ -19,6 +19,7 @@
     <table>
         <thead>
             <tr>
+                <th>#</th>
                 <th>{% translate "First name" %}</th>
                 <th>{% translate "Last name" %}</th>
                 <th>{% translate "Birth date" %}</th>
@@ -36,6 +37,7 @@
 
             {% for user in users %}
                 <tr>
+                    <td>{{ forloop.counter }}</td>
                     <td>{{ user.first_name }}</td>
                     <td>{{ user.last_name }}</td>
                     <td>{{ user.detail.dob }}</td>
@@ -52,6 +54,7 @@
             
         </tbody>
     </table>
+    {% include "main/pagination.html" with page=users %}
     <p>{% translate "Administrators, please make sure to notify users before modifications." %}</p>
 </section>
 

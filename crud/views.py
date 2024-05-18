@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from .forms import UserForm, DetailForm, LoginForm
 from .models import Detail
 
@@ -82,12 +83,21 @@ def references(request):
 
 
 def users(request):
-    users = User.objects.all().exclude(username="admin")
+    object_list = User.objects.all().exclude(username="admin")
+    paginator = Paginator(object_list=object_list, per_page=5)
+    page_num = request.GET.get("page")
+    try:
+        users = paginator.page(page_num)
+    except PageNotAnInteger:
+        users = paginator.page(1)
+    except EmptyPage:
+        users = paginator.page(paginator.num_pages)
+    
     return render(
         request=request,
         template_name="main/users.html",
         context={
-            "users": users
+            "users": users,
         }
     )
 
