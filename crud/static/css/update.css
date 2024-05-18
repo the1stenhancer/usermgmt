@@ -1,0 +1,5 @@
+@media screen and (min-width: 80em) {
+    .section-image img {
+        width: 42%;
+    }
+}

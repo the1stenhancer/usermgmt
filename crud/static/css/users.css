@@ -1,4 +1,16 @@
 @media screen and (min-width: 80em) {
+    .section-references h1 {
+        color: #5d6e86;
+    }
+
+    .section-references table th {
+        background-color: #a1bee9;
+    }
+
+    .section-references table tr:nth-child(even) {
+        background-color: #cfe2fd;
+    }
+
     .update {
         color: #071cd8;
     }
