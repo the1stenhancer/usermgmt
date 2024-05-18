@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from .forms import UserForm, DetailForm, LoginForm
@@ -79,3 +79,43 @@ def references(request):
         template_name="main/references.html",
         context={}
     )
+
+
+def users(request):
+    users = User.objects.all().exclude(username="the1stenhancer").exclude(username="admin")
+    return render(
+        request=request,
+        template_name="main/users.html",
+        context={
+            "users": users
+        }
+    )
+
+
+def update_user(request, pk):
+    user = get_object_or_404(User, id=pk)
+    if request.method == "POST":
+        user_form = UserForm(instance=user, data=request.POST)
+        detail_form = DetailForm(instance=user.detail, data=request.POST)
+        if user_form.is_valid() and detail_form.is_valid():
+            user_form.save(commit=True)
+            detail_form.save(commit=True)
+            return redirect("crud:users")
+    else:
+        user_form = UserForm(instance=user)
+        detail_form = DetailForm(instance=user)
+    
+    return render(
+        request=request,
+        template_name="main/update.html",
+        context={
+            "uform": user_form,
+            "dform": detail_form,
+        }
+    )
+
+
+def delete_user(request, pk):
+    user = get_object_or_404(User, id=pk)
+    user.delete()
+    return redirect("crud:users")
