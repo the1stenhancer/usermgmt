@@ -58,7 +58,7 @@
 
     .no-previous,
     .no-next {
-        opacity: 0.7;
+        opacity: 0.5;
     }
 
     .pagination-container .no-previous:hover,
