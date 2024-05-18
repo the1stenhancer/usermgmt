@@ -6,4 +6,8 @@
     .delete {
         color: #b10606;
     }
+
+    .update, .delete {
+        font-family: "roboto-bold";
+    }
 }

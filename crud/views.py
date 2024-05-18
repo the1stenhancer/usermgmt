@@ -94,17 +94,17 @@ def users(request):
 
 def update_user(request, pk):
     user: User = get_object_or_404(User, id=pk)
-    detail: Detail = user.detail
+    detail: Detail = get_object_or_404(Detail, user=user)
     if request.method == "POST":
         user_form = UserForm(instance=user, data=request.POST)
         detail_form = DetailForm(instance=detail, data=request.POST)
         if user_form.is_valid() and detail_form.is_valid():
-            user_form.save(commit=True)
-            detail_form.save(commit=True)
+            user_form.save()
+            detail_form.save()
             return redirect("crud:users")
     else:
         user_form = UserForm(instance=user)
-        detail_form = DetailForm(instance=user)
+        detail_form = DetailForm(instance=detail)
     
     return render(
         request=request,

@@ -66,6 +66,9 @@ class DetailForm(forms.ModelForm):
             }),
             "title": forms.TextInput(attrs={
                 "placeholder": _("Network/Security Engineer")
+            }),
+            "duration": forms.TextInput(attrs={
+                "placeholder": "3"
             })
         }
 

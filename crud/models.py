@@ -21,7 +21,7 @@ class Detail(models.Model):
     # work information
     doh = models.DateField(auto_now_add=True, help_text=_("Date of hiring"), null=False)
     title = models.CharField(help_text=_("Job title"), max_length=255, null=False)
-    duration = models.PositiveIntegerField(help_text=_("Contract duration"), default=3, null=False)
+    duration = models.PositiveIntegerField(help_text=_("Contract duration"), null=False)
     # other information
     updated = models.DateTimeField(auto_now=True, help_text=_("Datetime model was last modified"))
 
