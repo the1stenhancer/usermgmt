@@ -9,6 +9,7 @@ import re
 class UserForm(forms.ModelForm):
     confirm_password = forms.CharField(
         max_length=255, 
+        label=_("Confirm password"),
         help_text=_("Password should be 9 characters minimum, contain at least one lowercase, uppercase, symbol and number. No whitespace allowed e.g., A1!.#laN87@Jp"), 
         widget=forms.PasswordInput
     )
@@ -20,7 +21,7 @@ class UserForm(forms.ModelForm):
             "last_name": _("Last name"), 
             "email": _("Email"),
             "username": _("Username"),
-            "password": _("Password")
+            "password": _("Password"),
         }
         widgets = {
             "password": forms.PasswordInput,
@@ -35,14 +36,14 @@ class UserForm(forms.ModelForm):
             self.add_error(
                 "password", 
                 ValidationError(
-                    message=_("Password does not match confirm password"),
+                    message=_("Passwords do not match"),
                     code="mismatch"
                 )
             )
             self.add_error(
                 "confirm_password", 
                 ValidationError(
-                    message=_("Confirm password does not match password"),
+                    message=_("Passwords do not match"),
                     code="mismatch"
                 )
             )
@@ -55,7 +56,10 @@ class DetailForm(forms.ModelForm):
         labels = {
             "phone": _("Phone number"),
             "dob": _("Date of birth"),
-            "duration": _("Contract Duration")
+            "married": _("Married"),
+            "kids": _("Number of kids"),
+            "title": _("Job title"),
+            "duration": _("Contract Duration"),
         }
         widgets = {
             "phone": forms.TextInput(attrs={

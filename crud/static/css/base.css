@@ -40,7 +40,7 @@ body {
 @media screen and (min-width: 80em) {
     .desktop-hide {
         position: absolute;
-        left: -100%;
+        right: -100%;
     }
 
     nav {
@@ -102,8 +102,16 @@ body {
         color: #42B946;
     }
 
+    .nav-2 .language-dropdown .choose-language {
+        position: absolute;
+        right: 1rem;
+        top: 5.5rem;
+    }
+
     .nav-2 .language-dropdown .languages {
+        width: 6.5rem;
         padding: 0.5em 1em;
+        border-radius: 0.2rem;
         background-color: #fff;
         color: #111111;
         box-shadow: 0.1em 0.1em 0.5em #bbbbbb;

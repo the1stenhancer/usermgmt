@@ -22,4 +22,9 @@
     .update, .delete {
         font-family: "roboto-bold";
     }
+
+    .update:hover,
+    .delete:hover {
+        color: #42B946;
+    }
 }
