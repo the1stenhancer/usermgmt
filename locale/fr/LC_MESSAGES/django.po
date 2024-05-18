@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-14 04:53+0000\n"
+"POT-Creation-Date: 2024-05-18 05:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,30 +17,297 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: crud/templates/base.html:32
+
+#: crud/forms.py:12
+msgid ""
+"Password should be 9 characters minimum, contain at least one lowercase, "
+"uppercase, symbol and number. No whitespace allowed e.g., A1!.#laN87@Jp"
+msgstr ""
+
+#: crud/forms.py:19 crud/templates/main/users.html:22
+msgid "First name"
+msgstr ""
+
+#: crud/forms.py:20 crud/templates/main/users.html:23
+msgid "Last name"
+msgstr "Noms de famille"
+
+#: crud/forms.py:21
+msgid "Email"
+msgstr ""
+
+#: crud/forms.py:22 crud/forms.py:79
+msgid "Username"
+msgstr ""
+
+#: crud/forms.py:23 crud/forms.py:86
+msgid "Password"
+msgstr ""
+
+#: crud/forms.py:38
+msgid "Password does not match confirm password"
+msgstr ""
+
+#: crud/forms.py:45
+msgid "Confirm password does not match password"
+msgstr ""
+
+#: crud/forms.py:56 crud/models.py:17
+msgid "Phone number"
+msgstr ""
+
+#: crud/forms.py:57 crud/models.py:18
+msgid "Date of birth"
+msgstr ""
+
+#: crud/forms.py:58
+msgid "Contract Duration"
+msgstr ""
+
+#: crud/forms.py:68
+msgid "Network/Security Engineer"
+msgstr ""
+
+#: crud/forms.py:80
+msgid "A unique username"
+msgstr ""
+
+#: crud/forms.py:87
+msgid ""
+"Minimum length is 9, at least one symbol, lower and upper case letters, "
+"number"
+msgstr ""
+
+#: crud/forms.py:98
+msgid "Minimum password length is 9!"
+msgstr ""
+
+#: crud/models.py:12
+msgid "Yes"
+msgstr ""
+
+#: crud/models.py:12 crud/templates/main/users.html:25
+msgid "Married"
+msgstr ""
+
+#: crud/models.py:13
+msgid "No"
+msgstr ""
+
+#: crud/models.py:13
+msgid "Not Married"
+msgstr ""
+
+#: crud/models.py:19
+msgid "Marital status"
+msgstr ""
+
+#: crud/models.py:20
+msgid "Number of kids"
+msgstr ""
+
+#: crud/models.py:22
+msgid "Date of hiring"
+msgstr ""
+
+#: crud/models.py:23 crud/templates/main/users.html:28
+msgid "Job title"
+msgstr ""
+
+#: crud/models.py:24 crud/templates/main/users.html:29
+msgid "Contract duration"
+msgstr ""
+
+#: crud/models.py:26
+msgid "Datetime model was last modified"
+msgstr ""
+
+#: crud/templates/base.html:36
+msgid "Add User"
+msgstr ""
+
+#: crud/templates/base.html:37 crud/templates/main/users.html:13
 msgid "Users"
 msgstr ""
 
-#: crud/templates/base.html:33
+#: crud/templates/base.html:39 crud/templates/main/login.html:12
+#: crud/templates/main/login.html:16
 msgid "Login"
 msgstr ""
 
-#: crud/templates/base.html:34
-msgid "Register"
+#: crud/templates/base.html:41 crud/templates/main/references.html:10
+msgid "References"
 msgstr ""
 
-#: crud/templates/base.html:54
+#: crud/templates/base.html:43
+msgid "Logout"
+msgstr ""
+
+#: crud/templates/base.html:66
 msgid "Site powered by "
 msgstr ""
 
-#: crud/templates/main/dashboard.html:10
-msgid "Dashboard"
+#: crud/templates/main/home.html:12
+msgid "Home"
 msgstr ""
+
+#: crud/templates/main/home.html:18
+msgid "It&apos;s simple and enjoyable!"
+msgstr ""
+
+#: crud/templates/main/home.html:19
+msgid ""
+"Managing users has never been so simple and enjoyable at the same time. No "
+"need to be overwhelmed anymore, we have your back."
+msgstr ""
+
+#: crud/templates/main/home.html:21
+msgid "Login now"
+msgstr ""
+
+#: crud/templates/main/home.html:22
+msgid "Register now"
+msgstr ""
+
+#: crud/templates/main/login.html:20
+msgid "Login Form"
+msgstr ""
+
+#: crud/templates/main/references.html:15
+msgid "Tribute to resource authors"
+msgstr ""
+
+#: crud/templates/main/references.html:19
+msgid "Resource"
+msgstr ""
+
+#: crud/templates/main/references.html:20
+msgid "Type"
+msgstr ""
+
+#: crud/templates/main/references.html:21
+msgid "Location"
+msgstr ""
+
+#: crud/templates/main/references.html:22
+msgid "Author(s)"
+msgstr ""
+
+#: crud/templates/main/references.html:27
+msgid "Dropdown arrow"
+msgstr ""
+
+#: crud/templates/main/references.html:28
+msgid "Icon"
+msgstr ""
+
+#: crud/templates/main/references.html:29
+#: crud/templates/main/references.html:35
+msgid "Navigation bar"
+msgstr ""
+
+#: crud/templates/main/references.html:33
+msgid "Great Britain and France flags"
+msgstr ""
+
+#: crud/templates/main/references.html:34
+msgid "Image"
+msgstr ""
+
+#: crud/templates/main/references.html:39
+msgid "Girl with books and pen in hand"
+msgstr ""
+
+#: crud/templates/main/references.html:40
+#: crud/templates/main/references.html:46
+#: crud/templates/main/references.html:52
+#: crud/templates/main/references.html:58
+msgid "Illustration"
+msgstr ""
+
+#: crud/templates/main/references.html:41
+#: crud/templates/main/references.html:47
+msgid "Home page"
+msgstr ""
+
+#: crud/templates/main/references.html:45
+msgid "Work space and graph with web browser in background"
+msgstr ""
+
+#: crud/templates/main/references.html:51
+msgid "Young woman with stack of books"
+msgstr ""
+
+#: crud/templates/main/references.html:53
+msgid "Login page"
+msgstr ""
+
+#: crud/templates/main/references.html:57
+msgid "Young boys and young girl jumping"
+msgstr ""
+
+#: crud/templates/main/references.html:59
+msgid "Registration page"
+msgstr ""
+
+#: crud/templates/main/references.html:64
+msgid "Authors, once more, thank you for your awesome resources."
+msgstr ""
+
+#: crud/templates/main/register.html:12
+msgid "Registration"
+msgstr ""
+
+#: crud/templates/main/register.html:16
+msgid "Register"
+msgstr ""
+
+#: crud/templates/main/register.html:23
+msgid "Registration Form"
+msgstr ""
+
+#: crud/templates/main/update.html:12 crud/templates/main/update.html:16
+#: crud/templates/main/users.html:48
+msgid "Update"
+msgstr ""
+
+#: crud/templates/main/update.html:23
+msgid "Update User"
+msgstr ""
+
+#: crud/templates/main/users.html:18
+msgid "Users list"
+msgstr ""
+
+#: crud/templates/main/users.html:24
+msgid "Birth date"
+msgstr ""
+
+#: crud/templates/main/users.html:26
+msgid "Kids"
+msgstr "Enfants"
+
+#: crud/templates/main/users.html:27
+msgid "Hire Date"
+msgstr ""
+
+#: crud/templates/main/users.html:30
+msgid "Phone"
+msgstr ""
+
+#: crud/templates/main/users.html:49
+msgid "Delete"
+msgstr "Supprimer"
+
+#: crud/templates/main/users.html:55
+msgid ""
+"Administrators, please make sure to notify clients before modifications."
+msgstr ""
+
+#: usermgmt/settings.py:120
+msgid "English"
+msgstr "Anglais"
 
 #: usermgmt/settings.py:121
-msgid "English"
-msgstr ""
-
-#: usermgmt/settings.py:122
 msgid "French"
 msgstr ""

@@ -37,13 +37,13 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'crud.apps.CrudConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crud.apps.CrudConfig'
 ]
 
 MIDDLEWARE = [
@@ -113,13 +113,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-LOCALE_PATH = [
-    BASE_DIR / "locale",
-]
+LOCALE_PATHS = [BASE_DIR / 'locale',]
 
-LANGUAGES = [
+LANGUAGE = [
     ('en', _("English")),
-    ('fr', _("French"))
+    ('fr', _("French")),
 ]
 
 TIME_ZONE = 'UTC'

@@ -1,3 +1,6 @@
+# **Note**:
+Readme.md file is in both **English* and **French*
+
 # **Local (sur votre ordinateur)**
 Pour déployer cette application Web localement, procédez comme suit (assurez-vous que Python est installé sur votre ordinateur):
 
