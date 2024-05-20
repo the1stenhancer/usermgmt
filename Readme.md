@@ -1,6 +1,12 @@
 # **Note**
-Internalization is enable in this project, with the two supported languages being *English* and 
+1. Internalization is enable in this project, with the two supported languages being *English* and 
 *French* (Feel free to add yours).
+
+2. Default super user credentials for the Django administration site:
+   ```
+   username: admin
+   password: Super.20.24@
+   ```
 
 # **Local (on your computer)**
 To deploy this web application locally, follow these steps (make sure you have Python installed on your computer or your virtual machine):
@@ -17,7 +23,7 @@ To deploy this web application locally, follow these steps (make sure you have P
 	python manage.py runserver 127.0.0.1:49152 \--settings=usermgmt.settings.local
     ```
 
-5. Open your browser and type `127.0.0.1:49152/crud/`.
+5. Open your browser and type `127.0.0.1:49152` for the web application, and `127.0.0.1:49152/admin/` for the administrative site.
 
 6. You should see the web application:
 
