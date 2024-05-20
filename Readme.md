@@ -13,7 +13,7 @@ Pour déployer cette application Web localement, procédez comme suit (assurez-v
 4. Dans le terminal qui s'ouvre, procédez comme suit:
     ```
 	pip install -r requirements.txt
-	python manage.py runserver 127.0.0.1:49152 \--settings=usermgmt.settings
+	python manage.py runserver 127.0.0.1:49152 \--settings=usermgmt.settings.local
     ```
 
 5. Ouvrez votre navigateur et tapez: 127.0.0.1:49152/crud/ et vous verrez l'application Web.
