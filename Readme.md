@@ -17,7 +17,11 @@ To deploy this web application locally, follow these steps (make sure you have P
 	python manage.py runserver 127.0.0.1:49152 \--settings=usermgmt.settings.local
     ```
 
-5. Open your browser and type: 127.0.0.1:49152/crud/ and you will see the web application.
+5. Open your browser and type `127.0.0.1:49152/crud/`.
+
+6. You should see the web application:
+file:///home/the1stenhancer/Pictures/Screenshots/Screenshot%20from%202024-05-18%2013-11-23.png
+
 
 # **Internet**
 For this one, you will need to find a method based on your taste. Either setup yourself or use a web hosting company.
