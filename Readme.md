@@ -1,8 +1,10 @@
 # **Note**
-1. Internalization is enable in this project, with the two supported languages being *English* and 
+1. In the **Local** part of this Readme.md, I explain how to deploy with localhost (127.0.0.1). You could setup a VM like Ubuntu Server or CentOS, git clone the project in it, configure uWSGI, NGINX etc and use it as your production server (this is actually more fun, give it a try!).
+
+2. Internalization is enable in this project, with the two supported languages being *English* and 
 *French* (Feel free to add yours).
 
-2. Default super user credentials for the Django administration site:
+3. Default super user credentials for the Django administration site:
    ```
    username: admin
    password: Super.20.24@
