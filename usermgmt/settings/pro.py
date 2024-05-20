@@ -1,10 +1,12 @@
 from .base import *
 
 
+SECRET_KEY = env("PRODUCTION_SECRET_KEY")
+
 DEBUG = True
 
 ADMINS = (
-    ('Brian C', 'chuyebrian577@gmail.com'),
+    ('John D', 'john.doe@example.com'),
 )
 
 ALLOWED_HOSTS = ["www.usermgmt.com", "usermgmt.com"]
