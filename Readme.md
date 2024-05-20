@@ -1,8 +1,6 @@
 # **Note**:
-1. Internalization is enable in this project, with the two supported languages being *English* and 
+Internalization is enable in this project, with the two supported languages being *English* and 
 *French* (Feel free to add yours).
-2. For the tech-savvy, you will notice that the production settings file (pro.py) has `DEBUG = True`.
-This is intentional and should be changed to **False** in a production environment.
 
 # **Local (on your computer)**
 To deploy this web application locally, follow these steps (make sure you have Python installed on your computer or your virtual machine):

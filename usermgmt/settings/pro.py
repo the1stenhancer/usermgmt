@@ -3,7 +3,7 @@ from .base import *
 
 SECRET_KEY = env("PRODUCTION_SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 
 ADMINS = (
     ('John D', 'john.doe@example.com'),
