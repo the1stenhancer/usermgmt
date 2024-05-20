@@ -20,6 +20,7 @@ To deploy this web application locally, follow these steps (make sure you have P
 5. Open your browser and type `127.0.0.1:49152/crud/`.
 
 6. You should see the web application:
+
 ![Screenshot of the usermgmt web application home page](https://github.com/the1stenhancer/usermgmt/blob/main/crud/static/img/home_screen.png)
 
 
