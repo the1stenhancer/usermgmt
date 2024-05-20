@@ -2,20 +2,21 @@
 const navLogo = document.querySelector(".nav-1 a");
 navLogo.addEventListener("click", (e) => {
     sessionStorage.clear();
+    sessionStorage.setItem("active-link", "home-a");
 });
 
 const navLinks = document.querySelectorAll("nav .nav-2 ul li a");
 navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-        const linkName = link.textContent;
+        const linkID = link.id;
         sessionStorage.clear();
-        sessionStorage.setItem("active-link", linkName);
+        sessionStorage.setItem("active-link", linkID);
     })
 });
 
 navLinks.forEach((link) => {
-    const linkName = link.textContent;
-    if (linkName === sessionStorage.getItem("active-link")) {
+    const linkID = link.id;
+    if (linkID === sessionStorage.getItem("active-link")) {
         link.classList.add("highlight-navlink");
     } else {
         link.classList.remove("highlight-navlink");
@@ -38,7 +39,7 @@ languageDropdown.addEventListener("mouseleave", (e) => {
 languages.forEach((lang) => {
     const baseUrl = window.location.origin + "/";
     const langText = lang.textContent;
-    const pathName = window.location.pathname.split(currentLanguage.textContent)[1];
+    const pathName = window.location.pathname.split("/" + currentLanguage.textContent)[1];
     lang.addEventListener("click", (e) => {
         window.location.href = baseUrl + langText + pathName;
     });

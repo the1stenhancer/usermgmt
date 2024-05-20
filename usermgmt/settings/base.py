@@ -15,7 +15,7 @@ from django.utils.translation import gettext_lazy as _
 import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Env file
 env = environ.Env()
@@ -85,6 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'TEST': {
+            "NAME": BASE_DIR/ 'test_db.sqlite3',
+        }
     }
 }
 

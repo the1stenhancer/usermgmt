@@ -19,7 +19,7 @@ class Detail(models.Model):
     married = models.CharField(max_length=25, choices=MARITAL_STATUS, help_text=_("Marital status"), null=False)
     kids = models.PositiveIntegerField(default=0, help_text=_("Number of kids"), null=False)
     # work information
-    doh = models.DateField(auto_now_add=True, help_text=_("Date of hiring"), null=False)
+    doh = models.DateField(default=timezone.now, help_text=_("Date of hiring"), null=False)
     title = models.CharField(help_text=_("Job title"), max_length=255, null=False)
     duration = models.PositiveIntegerField(help_text=_("Contract duration"), null=False)
     # other information
@@ -31,7 +31,12 @@ class Detail(models.Model):
         return year - dob_year
     
     def eoh(self):
-        return timezone.datetime.date(self.doh + timezone.timedelta(days=self.duration*365))
+        doh = timezone.datetime(
+            self.doh.year,
+            self.doh.month,
+            self.doh.day
+        )
+        return timezone.datetime.date(doh + timezone.timedelta(days=self.duration*365))
 
     class Meta:
         ordering = ("-doh", "-duration")

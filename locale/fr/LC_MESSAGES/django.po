@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-18 08:15+0000\n"
+"POT-Creation-Date: 2024-05-19 09:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,11 +31,11 @@ msgstr ""
 "une minuscule, une majuscule, un symbole et un chiffre. Aucun espace n'est "
 "autorisé, par exemple A1 !.#laN87@Jp"
 
-#: crud/forms.py:20 crud/templates/main/users.html:22
+#: crud/forms.py:20 crud/templates/main/users.html:23
 msgid "First name"
 msgstr "Prénom"
 
-#: crud/forms.py:21 crud/templates/main/users.html:23
+#: crud/forms.py:21 crud/templates/main/users.html:24
 msgid "Last name"
 msgstr "Noms de famille"
 
@@ -63,7 +63,7 @@ msgstr "Numéro de téléphone"
 msgid "Date of birth"
 msgstr "Date de naissance"
 
-#: crud/forms.py:59 crud/models.py:12 crud/templates/main/users.html:25
+#: crud/forms.py:59 crud/models.py:12 crud/templates/main/users.html:26
 msgid "Married"
 msgstr "Marié"
 
@@ -71,7 +71,7 @@ msgstr "Marié"
 msgid "Number of kids"
 msgstr "Nombre d'enfants"
 
-#: crud/forms.py:61 crud/models.py:23 crud/templates/main/users.html:28
+#: crud/forms.py:61 crud/models.py:23 crud/templates/main/users.html:29
 msgid "Job title"
 msgstr "Titre d'emploi"
 
@@ -119,7 +119,7 @@ msgstr "Statut matrimonial"
 msgid "Date of hiring"
 msgstr "Date d'embauche"
 
-#: crud/models.py:24 crud/templates/main/users.html:29
+#: crud/models.py:24 crud/templates/main/users.html:30
 msgid "Contract duration"
 msgstr "Durée de contrat"
 
@@ -283,7 +283,7 @@ msgid "Registration Form"
 msgstr "Formulaire d'inscription"
 
 #: crud/templates/main/update.html:13 crud/templates/main/update.html:17
-#: crud/templates/main/users.html:48
+#: crud/templates/main/users.html:50
 msgid "Update"
 msgstr "Mettre à jour"
 
@@ -295,27 +295,27 @@ msgstr "Mettre à jour l'utilisateur"
 msgid "Users list"
 msgstr "Liste d'utilisateurs"
 
-#: crud/templates/main/users.html:24
+#: crud/templates/main/users.html:25
 msgid "Birth date"
 msgstr "Date de naissance"
 
-#: crud/templates/main/users.html:26
+#: crud/templates/main/users.html:27
 msgid "Kids"
 msgstr "Enfants"
 
-#: crud/templates/main/users.html:27
+#: crud/templates/main/users.html:28
 msgid "Hire Date"
 msgstr "Date d'embauche"
 
-#: crud/templates/main/users.html:30
+#: crud/templates/main/users.html:31
 msgid "Phone"
 msgstr "Téléphone"
 
-#: crud/templates/main/users.html:49
+#: crud/templates/main/users.html:51
 msgid "Delete"
 msgstr "Supprimer"
 
-#: crud/templates/main/users.html:55
+#: crud/templates/main/users.html:58
 msgid "Administrators, please make sure to notify users before modifications."
 msgstr ""
 "Administrateurs, assurez-vous d'informer les utilisateurs avant toute "

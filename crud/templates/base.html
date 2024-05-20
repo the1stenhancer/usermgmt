@@ -33,14 +33,14 @@
                 <div class="nav-2">
                     <span class="material-symbols-outlined desktop-hide">menu</span>
                     <ul class="mobile-hide">
-                        <li><a href="{% url 'crud:register' %}" class="register-a">{% translate "Add User" %}</a></li>
-                        <li><a href="{% url 'crud:users' %}" class="users-a">{% translate "Users" %}</a></li>
+                        <li><a href="{% url 'crud:register' %}" id="register-a" class="register-a">{% translate "Add User" %}</a></li>
+                        <li><a href="{% url 'crud:users' %}" id="users-a">{% translate "Users" %}</a></li>
                         {% if not user.is_authenticated %}
-                            <li><a href="{% url 'crud:login' 'home' %}" class="login-a">{% translate "Login" %}</a></li>
+                            <li><a href="{% url 'crud:login' 'home' %}" id="login-a">{% translate "Login" %}</a></li>
                         {% endif %}
-                        <li><a href="{% url 'crud:references' %}" class="references-a">{% translate "References" %}</a></li>
+                        <li><a href="{% url 'crud:references' %}" id="references-a">{% translate "References" %}</a></li>
                         {% if user.is_authenticated %}
-                            <li><a href="{% url 'crud:logout' %}" class="logout-a">{% translate "Logout" %}</a></li>
+                            <li><a href="{% url 'crud:logout' %}" id="logout-a">{% translate "Logout" %}</a></li>
                         {% endif %}
                         <li class="language-dropdown">
                             <p class="current-language">
