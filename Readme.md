@@ -10,7 +10,7 @@
    password: Super.20.24@
    ```
 
-4. The project contains dummy data, so you would run the app and have data to use ASAP.
+4. The project contains dummy data, so you would run the web application and have data to use ASAP.
 
 # **Local (on your computer)**
 To deploy this web application locally, follow these steps (make sure you have Python installed on your computer or your virtual machine):
