@@ -47,6 +47,10 @@ class UserForm(forms.ModelForm):
                     code="mismatch"
                 )
             )
+            raise ValidationError(
+                message=_("Passwords do not match"),
+                code="mismatch"
+            )
 
 
 class DetailForm(forms.ModelForm):
