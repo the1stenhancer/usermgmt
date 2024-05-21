@@ -1,4 +1,6 @@
 # **Note**
+0. Visit https://prantix.com and share, thank you in advance!
+
 1. In the **Local** part of this Readme.md, I explain how to deploy with localhost (127.0.0.1). You could setup a VM like Ubuntu Server or CentOS, git clone the project in it, configure uWSGI, NGINX etc and use it as your deployment server (this is actually more fun, give it a try!).
 
 2. Internalization is enable in this project, with the two supported languages being *English* and 
